@@ -4,7 +4,7 @@ import socket, sys, time
 
 host = sys.argv[1]
 textport = sys.argv[2]
-number = sys.args[3]
+number = (int) sys.args[3]
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 port = int(textport)
@@ -16,8 +16,8 @@ while 1:
     if not len(data):
         break
 #    s.sendall(data.encode('utf-8'))
-    for (int i = 0; i<number;i+=1):
-        s.sendto(data.encode('utf-8'), server_address)
+    
+    s.sendto(data.encode('utf-8'), server_address)
 
 s.shutdown(1)
 
