@@ -30,10 +30,11 @@ public class UDPSender {
 	        		 if (message.length()==0) break;
 	        		 byte [] data = message.getBytes() ;
 	        		 DatagramPacket packet = new DatagramPacket( data, data.length, host, port ) ;
-			 	 int i = 0; 
-			 	 while(i<n){
-	        		 	socket.send( packet ) ;
-					 i++;
+			 	socket.send( packet ) ;
+			 	 int i = 1; 
+			 	 while(i<=n){
+	        		 	socket.send("Message"+i)
+					i++;
 				 }
 	         } 
 	         System.out.println ("Closing down");
