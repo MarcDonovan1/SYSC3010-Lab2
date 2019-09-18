@@ -15,9 +15,12 @@ while 1:
     data = sys.stdin.readline().strip()
     if not len(data):
         break
-#    s.sendall(data.encode('utf-8'))
-    
+#    s.sendall(data.encode('utf-8')    
     s.sendto(data.encode('utf-8'), server_address)
+    
+    for (int i = 1; i<=number;i+=1):
+        data= "Number"+i
+        s.endto(data.encode('utf-8'),server_address)
 
 s.shutdown(1)
 
