@@ -16,7 +16,7 @@ while 1:
     if not len(data):
         break
 #    s.sendall(data.encode('utf-8'))
-    for (int i = 0; i<number;i++):
+    for (int i = 0; i<number;i+=1):
         s.sendto(data.encode('utf-8'), server_address)
 
 s.shutdown(1)
