@@ -14,6 +14,8 @@ while True:
     print ("Waiting to receive on port %d : press Ctrl-C or Ctrl-Break to stop " % port)
 
     buf, address = s.recvfrom(port)
+    call_back= "ACK:"+buf
+    s.endto(call_back.encode('utf-8'),server_address)
     if not len(buf):
         break
     print ("Received %s bytes from %s %s: " % (len(buf), address, buf ))
