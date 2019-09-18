@@ -24,6 +24,6 @@ while 1:
     
     if (i>=number):
         break
-    i++
+    i+=1
 s.shutdown(1)
 
