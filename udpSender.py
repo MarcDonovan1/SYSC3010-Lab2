@@ -19,8 +19,8 @@ while 1:
     s.sendto(data.encode('utf-8'), server_address)
     
     for (int i = 1; i<=number;i+=1):
-        data= "Number"+i
-        s.endto(data.encode('utf-8'),server_address)
+        new_message= "Number"+(str)i
+        s.endto(new_message.encode('utf-8'),server_address)
 
 s.shutdown(1)
 
